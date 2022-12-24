@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Favourites{% endblock %}
+
+{% block content %}
+    {% for product in favourites %}
+        {{ product.product.title }}
+        {{ product.product.brand }}
+        {{ product.product.count }}
+        {{ product.product.description }}
+    {% empty %}
+        Sevimlilaringizda hozircha tovarar yo'q.
+    {% endfor %}
+{% endblock %}
